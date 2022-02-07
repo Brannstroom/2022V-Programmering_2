@@ -15,21 +15,18 @@ public class Main {
         int amount = input.nextInt();
 
         for(int i = 1; i <= amount; i++) {
-            Planet planet = new Planet();
             Scanner planetInput = new Scanner(System.in);
 
             System.out.print("Enter the name of planet " + i + ": \n");
             String name = planetInput.nextLine();
-            planet.setName(name);
 
             System.out.println("Enter the radius of planet " + i + " in km: ");
             double radius = planetInput.nextDouble();
-            planet.setRadius(radius);
 
             System.out.println("Enter the mass of planet " + i + " in kg: ");
             double mass = planetInput.nextDouble();
-            planet.setMass(mass);
 
+            Planet planet = new Planet(name, radius, mass);
             planets.add(planet);
         }
 
