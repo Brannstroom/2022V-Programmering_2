@@ -1,5 +1,6 @@
 package models;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class PlanetSystem {
@@ -10,14 +11,20 @@ public class PlanetSystem {
 
     private List<Planet> planets;
 
-    public PlanetSystem(String name) {
-        this.name = name;
-    }
-
     public PlanetSystem(String name, Star centerStar, List<Planet> planets) {
         this.name = name;
         this.centerStar = centerStar;
         this.planets = planets;
+    }
+
+    public PlanetSystem(String name, Star centerStar, Planet... planets) {
+        this.name = name;
+        this.centerStar = centerStar;
+        this.planets = Arrays.asList(planets);
+    }
+
+    public PlanetSystem(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -103,10 +110,10 @@ public class PlanetSystem {
     public String toStringStandardUnits() {
         String planetsString = "";
         for(Planet planet : planets) {
-            planetsString += "\n    Name: " + planet.getName() + ", Radius (km): " + planet.getRadiusInKm() + ", Mass (kg): " + planet.getMassInKg();
+            planetsString += "\n    Name: " + planet.getName() + ", Radius (km): " + planet.getRadiusInKm(CelestialBodyType.PLANET) + ", Mass (kg): " + planet.getMassInKg(CelestialBodyType.PLANET);
         }
 
-        String centerStarString = "\n    Name: " + centerStar.getName() + ", Radius (km): " + centerStar.getRadiusInKm() + ", Mass (kg): " + centerStar.getMassInKg() + ", Effective Temperature: " + centerStar.getEffectiveTemp();
+        String centerStarString = "\n    Name: " + centerStar.getName() + ", Radius (km): " + centerStar.getRadiusInKm(CelestialBodyType.STAR) + ", Mass (kg): " + centerStar.getMassInKg(CelestialBodyType.STAR) + ", Effective Temperature: " + centerStar.getEffectiveTemp();
 
         return "Name: " + this.name + "\nCenter star: " + centerStarString + "\nPlanets: " + planetsString;
     }
