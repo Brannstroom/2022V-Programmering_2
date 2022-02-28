@@ -33,7 +33,7 @@ public class Main {
         int[] degrees2_6 = {0, 45, 90, 135, 180};
         for(int i : degrees2_6) {
             double distance = earth.distanceToCentralBody(i);
-            System.out.println("At a distance of " + distance + "km, " + earth.getName() + " has a velocity of " + earth.orbitingVelocity(distance) + "km/s");
+            System.out.println("At a distance of " + distance + "km, " + earth.getName() + " has a velocity of " + earth.orbitingVelocity(distance, false) + "km/s");
         }
     }
 }

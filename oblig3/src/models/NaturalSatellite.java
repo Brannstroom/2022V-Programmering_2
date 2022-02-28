@@ -76,11 +76,18 @@ public abstract class NaturalSatellite extends CelestialBody {
     }
 
     /* Oppgave 2.6 a */
-    public double orbitingVelocity(double distance) {
+    /**
+     *
+     * @param distance distance to central body
+     * @param inMeters returns the value in meters, else in km
+     * @return
+     */
+    public double orbitingVelocity(double distance, boolean inMeters) {
         double g = 6.67408E-11;
         double m = centralCelestialBody.getMassInKg();
         double r = distance*1000;
 
-        return Math.sqrt((g*m)/r)/1000;
+        int i = inMeters ? 1 : 1000;
+        return Math.sqrt((g*m)/r)/i;
     }
 }
