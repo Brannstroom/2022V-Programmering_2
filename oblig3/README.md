@@ -24,7 +24,6 @@ Et interface i Java kan på mange måter sammenlignes med en mal. Et interface e
 ![UML Diagram](https://user-images.githubusercontent.com/54285305/156795651-e36b3bcb-3a48-47c5-a184-f6915db0d822.png)
 
 #
-#
 <!DOCTYPE html>
 <body>
     <details>
