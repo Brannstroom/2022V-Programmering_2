@@ -21,7 +21,7 @@ Et interface i Java kan på mange måter sammenlignes med en mal. Et interface e
 
 
 ### Oppgave 1.2
-![UML Diagram](https://user-images.githubusercontent.com/54285305/156795651-e36b3bcb-3a48-47c5-a184-f6915db0d822.png)
+![UML Diagram](https://github.com/Brannstroom/2022V-Programmering_2/blob/main/oblig3/uml_diagram.png?raw=true)
 
 #
 <!DOCTYPE html>
