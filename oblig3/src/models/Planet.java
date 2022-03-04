@@ -21,11 +21,11 @@ public class Planet extends NaturalSatellite {
 
     @Override
     public double getRadiusInKm() {
-        return mass*Rjup;
+        return mass*RJUP;
     }
 
     @Override
     public double getMassInKg() {
-        return mass*Mjup;
+        return mass*MJUP;
     }
 }

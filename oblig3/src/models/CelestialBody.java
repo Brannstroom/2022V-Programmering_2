@@ -8,12 +8,12 @@ public abstract class CelestialBody {
 
     protected double mass;
 
-    /* Oppgave 2.3 */
-    protected static final double Rjup = 71492;
-    protected static final double Rsun = 695700;
+    /* Task 2.3 */
+    protected static final double RJUP = 71492;
+    protected static final double RSUN = 695700;
 
-    protected static final double Mjup = 1.898E27;
-    protected static final double Msun = 1.98892E30;
+    protected static final double MJUP = 1.898E27;
+    protected static final double MSUN = 1.98892E30;
 
 
     public CelestialBody(String name, double radius, double mass) {

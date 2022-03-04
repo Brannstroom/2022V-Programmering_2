@@ -35,5 +35,9 @@ public class Main {
             double distance = earth.distanceToCentralBody(i);
             System.out.println("At a distance of " + distance + "km, " + earth.getName() + " has a velocity of " + earth.orbitingVelocity(distance, false) + "km/s");
         }
+
+        System.out.println(earth.getName() + " has a maximum distance of " + earth.getMaximumDistanceToCentralCelestialBody() + " km");
+        System.out.println(earth.getName() + " has a minimum distance of " + earth.getMinimumDisctanceToCentralCelestialBody() + " km");
+
     }
 }

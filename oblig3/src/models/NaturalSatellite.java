@@ -67,7 +67,7 @@ public abstract class NaturalSatellite extends CelestialBody {
         this.centralCelestialBody = centralCelestialBody;
     }
 
-    /* Oppgave 2.5 a */
+    /* Task 2.5 a */
     public double distanceToCentralBody(double degrees) {
         double a = this.semiMajorAxis;
         double e = this.eccentricity;
@@ -75,7 +75,7 @@ public abstract class NaturalSatellite extends CelestialBody {
         return (a*(1-Math.pow(e, 2)))/(1+e*Math.cos(t))*149597871;
     }
 
-    /* Oppgave 2.6 a */
+    /* Task 2.6 a & Bonustask 3.1 */
     /**
      *
      * @param distance distance to central body
@@ -89,5 +89,24 @@ public abstract class NaturalSatellite extends CelestialBody {
 
         int i = inMeters ? 1 : 1000;
         return Math.sqrt((g*m)/r)/i;
+    }
+
+    /* Bonustask 3.2 */
+    public double getMinimumDisctanceToCentralCelestialBody() {
+        double distance = getMaximumDistanceToCentralCelestialBody();
+        for(double i = 0; i <= 360; i+=0.1) {
+            double d = distanceToCentralBody(i);
+            if(d < distance) distance = d;
+        }
+        return distance;
+    }
+
+    public double getMaximumDistanceToCentralCelestialBody() {
+        double distance = 0;
+        for(double i = 0; i <= 360; i+=0.1) {
+            double d = distanceToCentralBody(i);
+            if(d > distance) distance = d;
+        }
+        return distance;
     }
 }

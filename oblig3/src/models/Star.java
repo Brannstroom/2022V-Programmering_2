@@ -18,11 +18,11 @@ public class Star extends CelestialBody {
     }
 
     public double getRadiusInKm() {
-        return radius*Rsun;
+        return radius*RSUN;
     }
 
     public double getMassInKg() {
-        return mass*Msun;
+        return mass*MSUN;
     }
 
     @Override
