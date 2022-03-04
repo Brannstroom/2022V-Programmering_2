@@ -1,0 +1,72 @@
+@startuml
+
++abstract class CelestialBody {
+
+    # name : String
+    # radius : double
+    # mass : double
+
+    #final RJUP : double
+    #final MSUN : double
+
+    #final MJUP : double
+    #final MSUN : double
+
+    + {abstract} double getRadiusInKm()
+    + {abstract} double getMassInKg()
+    +double getSurfaceGravity()
+    +String toString()
+    +String toStringMetric()
+}
+
++abstract class NaturalSatelline {
+
+    - semiMajorAxis : double
+    - eccentricity : double
+    - orbitalPeriod : double
+    - centralCelestialBody : CelestialBody
+
+   +double distanceToCentralBody(double degrees)
+   +double orbitingVelocity(double distance, boolean inMeters)
+   +double getMinimumDisctanceToCentralCelestialBody()
+   +double getMaximumDistanceToCentralCelestialBody()
+
+}
+
++class Planet {
+
+    +double getRadiusInKm()
+    +double getMassInKg()
+
+}
+
++class PlanetSystem {
+
+    - name : String
+    - centerStar : Star
+    - planets : List<Planet>
+
+    +Planet getPlanet(String name)
+    +Planet getBiggestPlanet()
+    +Planet getSmallestPlanet()
+
+    +String toString()
+    +String toStringMetric()
+
+}
+
++class Star {
+
+    -double effectiveTemp
+
+    +String toString()
+    +String toStringMetric()
+
+}
+
+CelestialBody <|-- Star
+CelestialBody <|-- NaturalSatelline
+NaturalSatelline <|-- Planet
+
+
+@enduml

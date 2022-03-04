@@ -108,7 +108,7 @@ public class PlanetSystem {
 
     }
 
-    public String toStringStandardUnits() {
+    public String toStringMetric() {
         String planetsString = "";
         for(Planet planet : planets) {
             planetsString += "\n    Name: " + planet.getName() + ", Radius (km): " + planet.getRadiusInKm() + ", Mass (kg): " + planet.getMassInKg();

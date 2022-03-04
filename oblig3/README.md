@@ -20,9 +20,8 @@ På samme måte er det også mulig å abstrahere metoder i Java. En abstrakt met
 Et interface i Java kan på mange måter sammenlignes med en mal. Et interface er en totalt abstrahert klasse helt uten fungerende kropp, men blir kun brukt som en mal som under-klasser kan implementere.
 
 
-
-
-
+### Oppgave 1.2
+![UML Diagram](https://github.com/Brannstroom/2022V-Programmering_2/tree/main/oblig3/uml_diagram.png?raw=true)
 
 
 #
