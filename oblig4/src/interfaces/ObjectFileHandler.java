@@ -5,8 +5,8 @@ import java.util.List;
 
 public interface ObjectFileHandler<T extends Object> {
 
-    void writeObjectsToFile(List<T> objects, File file);
+    void writeObjectsToFile(File file, T objects);
 
-    List<T> readObjectsFromFile(File file);
+    T readObjectsFromFile(File file);
 
 }

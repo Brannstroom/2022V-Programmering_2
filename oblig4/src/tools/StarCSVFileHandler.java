@@ -6,22 +6,21 @@ import models.Star;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class StarCSVFileHandler implements ObjectFileHandler<Star> {
+public class StarCSVFileHandler implements ObjectFileHandler<List<Star>> {
 
     @Override
-    public void writeObjectsToFile(List<Star> objects, File file) {
+    public void writeObjectsToFile(File file, List<Star> objects) {
         try (BufferedWriter bufferedWriter = new BufferedWriter((new FileWriter(file)))) {
             for(Star star : objects) {
                 bufferedWriter.write(star.serialize());
                 bufferedWriter.newLine();
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override

@@ -4,7 +4,6 @@ import models.Star;
 import tools.StarCSVFileHandler;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 public class Main {
@@ -53,7 +52,7 @@ public class Main {
         List<Star> stars = starCSVFileHandler.readObjectsFromFile(input);
         System.out.println("\n\n\n" + stars);
 
-        starCSVFileHandler.writeObjectsToFile(stars, output);
+        starCSVFileHandler.writeObjectsToFile(output, stars);
 
     }
 }
