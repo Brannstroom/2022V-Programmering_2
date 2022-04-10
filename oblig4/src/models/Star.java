@@ -37,9 +37,13 @@ public class Star extends CelestialBody {
 
     @Override
     public int compareTo(CelestialBody o) {
+        return Double.compare(this.mass, o.mass);
+
+        /*
         if (this.mass == o.mass) return 0;
         else if (this.mass > o.mass) return 1;
         else return -1;
+         */
     }
 
     public String serialize() {

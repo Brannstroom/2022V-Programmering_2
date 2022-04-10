@@ -1,12 +1,10 @@
 package tools;
 
 import interfaces.ObjectFileHandler;
-import models.CelestialBody;
 import models.Star;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class StarCSVFileHandler implements ObjectFileHandler<List<Star>> {

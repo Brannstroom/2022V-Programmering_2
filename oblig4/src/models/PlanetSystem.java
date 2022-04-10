@@ -122,8 +122,12 @@ public class PlanetSystem implements Comparable<PlanetSystem> {
 
     @Override
     public int compareTo(PlanetSystem o) {
+        return Integer.compare(o.planets.size(), this.planets.size());
+
+        /*
         if(this.planets.size() == o.planets.size()) return 0;
         else if(this.planets.size() < o.planets.size()) return 1;
         else return -1;
+         */
     }
 }

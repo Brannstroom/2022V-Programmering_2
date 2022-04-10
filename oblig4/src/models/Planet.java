@@ -33,8 +33,12 @@ public class Planet extends NaturalSatellite {
 
     @Override
     public int compareTo(CelestialBody o) {
+        return Double.compare(o.mass, this.mass);
+
+        /*
         if(this.mass == o.mass) return 0;
         else if(this.mass < o.mass) return 1;
         else return -1;
+        */
     }
 }
